@@ -70,7 +70,7 @@ function Write-ToExcel {
     }
     process{
         # Activate the WorkSheet
-        $WS = $WB.Sheets | Where {$_.Name -eq $SheetName}
+        $WS = $WB.Sheets | Where-Object{$_.Name -eq $SheetName}
         $Cells = $WS.Cells
 
         #Insert the data into the column
